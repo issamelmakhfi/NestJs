@@ -4,8 +4,6 @@ import { ControllerController } from './coffes/controller/controller.controller'
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { type } from 'os';
 import { CoffeModule } from './coffes/coffe.module';
-import { DeviceController } from './device/device.controller';
-import { Device } from './device/device';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -14,12 +12,12 @@ import { Device } from './device/device';
     port: 5432,
     username: 'postgres',
     password: 'pass1337',
-    database: 'postgres',
+    database: 'issam_db',
     autoLoadEntities: true,
     synchronize: true,
   }), CoffeModule,
 ],
-  controllers: [DeviceController],
-  providers: [Device],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}

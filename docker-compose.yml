@@ -8,3 +8,8 @@ services:
       - "5432:5432"
     environment:
       POSTGRES_PASSWORD: pass1337
+  adminer:
+      image: dockette/adminer:full-php5
+      restart: always
+      ports:
+        - 8080:8080
